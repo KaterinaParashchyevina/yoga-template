@@ -185,12 +185,107 @@ body {
 .text-center {
   text-align: center; }
 
+.main-banner {
+  width: 100%;
+  background: url(../../img/bg.png);
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  padding-top: 100px;
+  padding-bottom: 100px; }
+  .main-banner .container-inside div {
+    padding-left: 40px;
+    padding-right: 40px; }
+
 nav {
-  text-align: center; }
-  nav ul li {
-    display: inline-block; }
-  nav ul a {
-    text-decoration: none; }
+  text-align: center;
+  padding-bottom: 15px; }
+  nav ul {
+    padding: 0; }
+    nav ul li {
+      display: inline-block;
+      vertical-align: middle; }
+      nav ul li img {
+        margin: 0 10rem; }
+    nav ul a {
+      text-decoration: none;
+      padding: 15px;
+      color: #818181;
+      font-weight: 600;
+      position: relative; }
+    nav ul a:hover, nav ul a:focus {
+      color: #5363db; }
+    nav ul a::before {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 0;
+      background-color: #5363db;
+      transition: width .3s ease-in-out, left .3s ease-in-out;
+      left: 50%;
+      bottom: 0; }
+    nav ul a::after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 0;
+      background-color: #5363db;
+      transition: width .3s ease-in-out;
+      left: 50%;
+      bottom: 0; }
+    nav ul a:hover::before {
+      width: 20%;
+      left: 30%; }
+    nav ul a:hover::after {
+      width: 20%; }
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  float: right; }
+
+h2 {
+  font-weight: 600;
+  font-size: 25px;
+  color: #5363db;
+  margin-top: 0; }
+
+input, select {
+  display: block;
+  margin: 15px 0;
+  width: 100%;
+  padding: 10px;
+  background: #f2f2f2;
+  color: #a8a8a8;
+  border: none;
+  border-radius: 5px; }
+
+button {
+  margin: 15px 0 15px 15px;
+  color: #ffffff;
+  background: #5363db;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 60px;
+  float: right; }
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase; }
+
+h1 + p {
+  font-family: "Freestyle Script";
+  font-size: 40px;
+  color: #ffffff; }
 
 footer {
   flex: 0 0 auto;
