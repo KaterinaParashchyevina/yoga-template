@@ -287,6 +287,97 @@ h1 + p {
   font-size: 40px;
   color: #ffffff; }
 
+.classes {
+  padding-top: 120px;
+  padding-bottom: 120px; }
+  .classes h2 {
+    text-transform: uppercase;
+    color: #5b6ceb;
+    font-weight: 700; }
+  .classes h2 + p {
+    font-family: "Freestyle Script";
+    font-size: 25px;
+    color: #777777; }
+  .classes .yoga-class-block {
+    -webkit-box-shadow: 2px 2px 5px 0px #cccccc;
+    -moz-box-shadow: 2px 2px 5px 0px #cccccc;
+    box-shadow: 2px 2px 5px 0px #cccccc;
+    margin: 15px;
+    box-sizing: content-box;
+    width: calc(50% - 30px);
+    border-radius: 10px; }
+    .classes .yoga-class-block div {
+      display: inline-block; }
+    .classes .yoga-class-block .yoga-class-block-img {
+      width: 45%; }
+    .classes .yoga-class-block .yoga-class-block-text {
+      width: 54%;
+      box-sizing: border-box;
+      vertical-align: top;
+      padding: 30px 50px 30px 30px; }
+      .classes .yoga-class-block .yoga-class-block-text h2 {
+        font-size: 20px;
+        margin-top: 15px;
+        color: #777777; }
+      .classes .yoga-class-block .yoga-class-block-text p {
+        font-size: 14px;
+        font-family: 'Open Sans', sans-serif; }
+      .classes .yoga-class-block .yoga-class-block-text p + p {
+        color: #999999; }
+
+.about {
+  padding-top: 125px;
+  padding-bottom: 125px; }
+  .about h2 {
+    text-transform: uppercase;
+    color: #5b6ceb;
+    font-weight: 700; }
+  .about p {
+    font-size: 14px;
+    padding-right: 8rem;
+    color: #555555; }
+
+.elements {
+  padding-top: 125px;
+  padding-bottom: 125px;
+  background: url(../../img/bg1.png);
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  color: #ffffff; }
+  .elements h4 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700; }
+  .elements p {
+    font-size: 16px;
+    padding: 0 1em; }
+
+.shop {
+  padding-top: 125px;
+  padding-bottom: 125px;
+  background: url(../../img/bg3.png);
+  background-position: right bottom;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto; }
+  .shop .table {
+    border-radius: 10px; }
+  .shop .table-cell {
+    padding: 20px;
+    text-transform: uppercase; }
+  .shop .table-caption {
+    padding: 40px;
+    color: #ffffff;
+    background: #5b6ceb; }
+  .shop button {
+    border-radius: 20px; }
+  .shop .blockquote {
+    background: #ffffff;
+    border-radius: 10px;
+    margin-top: 6rem; }
+    .shop .blockquote blockquote {
+      font-style: italic;
+      font-size: 14px; }
+
 footer {
   flex: 0 0 auto;
   background: #5b6ceb;
