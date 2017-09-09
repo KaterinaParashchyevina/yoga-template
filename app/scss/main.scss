@@ -1,3 +1,7 @@
-body {
-	background-color: pink;
-	}
+@import "modules/color";
+
+@import "partials/grid";
+@import "partials/table";
+@import "partials/base";
+@import "partials/header";
+@import "partials/footer";
