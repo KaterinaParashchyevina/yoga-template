@@ -160,6 +160,16 @@
 .table-cell {
   display: table-cell; }
 
+html, body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif; }
+
 .container {
   width: 1920px;
   margin: 0 auto; }
@@ -172,9 +182,85 @@
   width: 100%;
   height: auto; }
 
+.text-center {
+  text-align: center; }
+
 nav {
   text-align: center; }
   nav ul li {
     display: inline-block; }
   nav ul a {
     text-decoration: none; }
+
+footer {
+  flex: 0 0 auto;
+  background: #5b6ceb;
+  color: #ffffff;
+  padding-top: 2em;
+  font-size: 14px; }
+  footer h4 {
+    font-size: 18px;
+    margin-bottom: 2em;
+    text-transform: uppercase; }
+  footer p {
+    padding-right: 7vw; }
+  footer .social-icons .icon {
+    display: inline-block;
+    margin: 5px;
+    width: 22px;
+    height: 22px;
+    font-size: 0; }
+  footer .social-icons .icon-pinterest {
+    background: url(../../img/pinterest-outlined-logo.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .social-icons .icon-twitter {
+    background: url(../../img/twitter-social-outlined-logo.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .social-icons .icon-facebook {
+    background: url(../../img/facebook-logo-outline.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .social-icons .icon-google {
+    background: url(../../img/google-plus-outlined-logo-social-symbol.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .social-icons .icon-instagram {
+    background: url(../../img/instagram-social-outlined-logo.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .placeholder-text {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px; }
+  footer .email-text, footer .phone-text, footer .web-text {
+    display: flex; }
+  footer .contact-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 20px; }
+  footer .placeholder-icon {
+    background: url(../../img/placeholder.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    margin: 5px 20px 5px 5px; }
+  footer .email-icon {
+    background: url(../../img/envelope.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .phone-icon {
+    background: url(../../img/phone-call.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .web-icon {
+    background: url(../../img/planet-earth.png) no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%; }
+  footer .copyright {
+    background: #5363d8;
+    color: #9aa4f0;
+    padding: 2em;
+    margin-top: 6rem;
+    font-size: 16px; }

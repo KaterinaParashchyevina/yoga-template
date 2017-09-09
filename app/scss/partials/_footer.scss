@@ -1,0 +1,100 @@
+footer {
+  flex: 0 0 auto;
+  background: $footer-background-color;
+  color: $footer-text-color;
+    padding-top: 2em;
+  font-size: 14px;
+  h4 {
+    font-size: 18px;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+  }
+  p {
+
+    padding-right: 7vw;
+  }
+
+.social-icons{
+  .icon{
+    display: inline-block;
+    margin: 5px;
+    width: 22px;
+    height: 22px;
+    font-size: 0;
+
+  }
+  .icon-pinterest{
+    background: url(../../img/pinterest-outlined-logo.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+
+  .icon-twitter{
+    background: url(../../img/twitter-social-outlined-logo.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+  .icon-facebook{
+    background: url(../../img/facebook-logo-outline.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+  .icon-google{
+    background: url(../../img/google-plus-outlined-logo-social-symbol.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+  .icon-instagram{
+    background: url(../../img/instagram-social-outlined-logo.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+
+}
+
+    .placeholder-text{
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+  .email-text, .phone-text, .web-text {
+    display: flex;
+  }
+
+  .contact-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
+
+  }
+  .placeholder-icon{
+    background: url(../../img/placeholder.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    margin: 5px 20px 5px 5px;
+  }
+  .email-icon{
+    background: url(../../img/envelope.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+  .phone-icon{
+    background: url(../../img/phone-call.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+  .web-icon{
+    background: url(../../img/planet-earth.png) no-repeat;
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+  }
+
+.copyright{
+  background: $footer-copyright-area;
+  color: $footer-copyright-area-text;
+  padding: 2em;
+  margin-top: 6rem;
+  font-size: 16px;
+}
+}
