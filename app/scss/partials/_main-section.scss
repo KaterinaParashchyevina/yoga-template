@@ -19,11 +19,17 @@
     box-sizing: content-box;
     width: calc(50% - 30px);
     border-radius: 10px;
+    display: flex;
+    align-items: inherit;
     div {
       display: inline-block;
     }
     .yoga-class-block-img{
       width: 45%;
+      img{
+        width: 100%;
+        height: 100%;
+      }
 
     }
     .yoga-class-block-text{
@@ -47,7 +53,48 @@
 
   }
 }
-.gallery{}
+.gallery{
+  img {
+    width: 100%;
+  }
+  .thumb {
+    display: flex;
+    align-items: stretch;
+  }
+  .thumb:hover .thumb_overlay {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .thumb_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+  }
+  .thumb_overlay::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    background: url("../../img/search.png") no-repeat center center;
+    transition: 0.5s all ease;
+    border-radius: 50%;
+  }
+  .thumb_overlay::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height:100%;
+    background: rgba(119,132,234,0.8);
+  }
+}
 .about{
   padding-top: 125px;
   padding-bottom: 125px;
@@ -60,6 +107,42 @@
     font-size: 14px;
     padding-right: 8rem;
     color: $about-section-color;
+  }
+  .arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+  }
+  .arrow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 95%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    background: url("../../img/arrow-next.png") no-repeat center center;
+    transition: 0.5s all ease;
+    border-radius: 50%;
+  }
+  .arrow::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    background: url("../../img/arrow-prew.png") no-repeat center center;
+    transition: 0.5s all ease;
+    border-radius: 50%;
   }
 }
 .elements{
@@ -88,27 +171,136 @@
   background-size: 100% auto;
   .table{
     border-radius: 10px;
+    background: $table-background;
+    color: $table-text-color;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(204,204,204,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(204,204,204,1);
+    box-shadow: 2px 2px 5px 0px rgba(204,204,204,1);
+    margin: 0 auto;
+    hr {
+      width: 30%;
+      height: 1px;
+      border: none;
+      border-top: 1px solid $hr-color;
+      margin: 0 auto;
+    }
   }
   .table-cell{
-     padding: 20px;
+    padding: 25px 80px;
     text-transform: uppercase;
+
    }
+
   .table-caption {
-    padding: 40px;
     color: $header-text-color;
     background: $additional-color;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 18px;
+    font-weight:700;
+
+    :first-child {
+      font-size: 32px;
+    }
+    :nth-child(2){
+      font-size: 68px;
+    }
   }
   button {
     border-radius: 20px;
+    margin-top: 0;
   }
   .blockquote{
     background: $header-text-color;
     border-radius: 10px;
     margin-top:6rem;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(204,204,204,1);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(204,204,204,1);
+    box-shadow: 2px 2px 5px 0px rgba(204,204,204,1);
     blockquote{
       font-style: italic;
       font-size: 14px;
+      margin-top: 40px;
+      color: $blockquote-color;
     }
+    blockquote:before, blockquote:after {
+      content: "\201C";
+      color: $additional-color;
+      font-size: 60px;
+      position: absolute;
+      z-index: 1;
+    }
+    blockquote:before {
+      top: 20px;
+      left: 5px;
+    }
+    blockquote:after {
+      content: "\201D";
+      bottom: 0;
+      right: 25px;
+    }
+    .blockquote-line:before {
+      content: '';
+      width: 2px;
+      height: 70px;
+      background: $hr-color;
+      position: absolute;
+      left: 15px;
+    }
+    cite {
+      font-style: normal;
+      font-size: 14px;
+      color: $cite-color;
+      margin-left: 40px;
+    }
+    cite span {
+      color: $additional-color;
+      display: block;
+      margin-left: 40px;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+  } .text-shadow {
+      text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+      0px 8px 13px rgba(0,0,0,0.1),
+      0px 18px 23px rgba(0,0,0,0.1);
+  background: lighten($additional-color, 2%);
+
+    }
+  .round-button{
+    display: inline-block;
+    position: absolute;
+    .radio {
+      vertical-align: top;
+      width: 17px;
+      height: 17px;
+      margin: 3px;
+      border:1px solid $cite-color;
+      background: red;
+    }
+
+  }
+  .trainer{
+    width: 25%;
+    font-size: 14px;
+    margin-left: 30%;
+    color: $table-text-color;
+    position: relative;
+    top:-40px;
+   p {
+     margin-top: 5px;
+     margin-bottom: 5px;
+   }
+    p:first-child{
+      font-weight:bold;
+      margin-top: 15px;
+    }
+    .arrow-img {
+      margin-top: 20px;
+    }
+
+
   }
 
 }
