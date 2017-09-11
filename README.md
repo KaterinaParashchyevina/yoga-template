@@ -1,3 +1,3 @@
 # yoga-template
-npm install
+npm install;
 gulp watch
