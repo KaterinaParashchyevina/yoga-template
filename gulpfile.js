@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
+		'app/js/jquery.validate.min.js',
         'app/js/jquery.min.js',
 		'app/js/main.js'// Берем jQuery
     ])
