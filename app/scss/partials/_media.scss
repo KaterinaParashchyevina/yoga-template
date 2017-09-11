@@ -1,0 +1,101 @@
+@media screen and (max-width: 1280px) {
+  .shop {
+    .round-button {
+      left: calc(50% + 500px);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container-inside {
+    width: 100%;
+  }
+  .main-banner {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .about {
+    padding-right: 5vw;
+    padding-left: 5vw;
+    img {
+      width: 100%;
+    }
+  }
+  .elements {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .shop {
+    .round-button {
+
+      left: calc(50% + 450px);
+    }
+    .trainer {
+      width: 35%;
+    }
+  }
+  footer h4, footer p, footer .social-icons {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+}
+
+@media (max-width: 992px) {
+  nav .main-menu {
+    display: none;
+  }
+  nav .dropdown-menu {
+    display: block;
+  }
+  .classes .yoga-class-block {
+    width: 95%;
+  }
+  .shop .round-button {
+    left: calc(50% + 400px);
+  }
+  .shop .table-cell {
+    padding: 25px 5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner .container-inside div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  form {
+    float: none;
+    width: 100%;
+    button {
+      float: none;
+    }
+  }
+  .about {
+    text-align: center;
+    p {
+      padding-right: 0;
+    }
+    img {
+      width: 95%;
+    }
+  }
+  .shop {
+    -webkit-background-size: cover;
+    background-size: cover;
+    .round-button {
+      display: none;
+    }
+    .trainer {
+      width: 75%;
+      margin-left: 10%;
+    }
+  }
+  footer {
+    text-align: center;
+    .contact-icon {
+      margin-left: 5vw;
+    }
+  }
+}

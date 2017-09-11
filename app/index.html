@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/main.css"> <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
 </head>
 <body>
 
 <header>
     <nav>
-        <ul>
+        <ul class="main-menu">
             <li><a href="#about-link">About us</a></li>
             <li><a href="#reservation-link">Reservation</a></li>
             <li><a href="#gallery-link">Gallery</a></li>
@@ -19,16 +20,28 @@
             <li><a href="#elements-link">Elements</a></li>
             <li><a href="#shop-link">Shop</a></li>
         </ul>
+        <div class="dropdown-menu">
+            <a class="dropdown-toggle" href="#" title="Menu">Menu</a>
+            <ul class="dropdown">
+                <li><a href="#about-link">About us</a></li>
+                <li><a href="#reservation-link">Reservation</a></li>
+                <li><a href="#gallery-link">Gallery</a></li>
+                <li><a href="#blog-link">Blog</a></li>
+                <li><a href="#elements-link">Elements</a></li>
+                <li><a href="#shop-link">Shop</a></li>
+            </ul>
+            <a href="index.html"><img src="img/logo.png"></a>
+        </div>
     </nav>
     <div class="main-banner" id="reservation-link">
         <div class="container-inside">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-lg-6">
-                    <form action="">
+                    <form action="#" id="form">
                         <h2>Trial Class</h2>
-                        <input type="text" placeholder="Enter your name">
-                        <input type="text" placeholder="Enter your phone">
-                        <select name="" id="">
+                        <input type="text" placeholder="Enter your name" name="userName">
+                        <input type="text" placeholder="Enter your phone" name="userPhone">
+                        <select name="class_variables" id="">
                             <option value="0">Choose your class</option>
                             <option value="1">Yoga for health</option>
                             <option value="2">Yoga for lose weight</option>
@@ -307,27 +320,39 @@
                     </blockquote>
                     <cite>Trainer <span>Laura Shepard</span></cite></div>
                 <div class="round-button">
-                <input type="radio" class="radio" disabled>
-                <input type="radio" class="radio" checked>
-                <input type="radio" class="radio" disabled>
-                <input type="radio" class="radio" disabled>
-            </div>
+                    <div class="radio">
+                        <input id="radio-1" name="radio" type="radio" disabled>
+                        <label for="radio-1" class="radio-label"></label>
+                    </div>
+                    <div class="radio">
+                        <input id="radio-2" name="radio" type="radio" checked>
+                        <label for="radio-2" class="radio-label"></label>
+                    </div>
+                    <div class="radio">
+                        <input id="radio-3" name="radio" type="radio" disabled>
+                        <label for="radio-3" class="radio-label"></label>
+                    </div>
+                    <div class="radio">
+                        <input id="radio-4" name="radio" type="radio" disabled>
+                        <label for="radio-4" class="radio-label"></label>
+                    </div>
+                </div>
             </div>
 
-            
+
             <div class="trainer">
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-lg-2">
+                    <div class="col-xs-2 col-sm-2 col-lg-2">
                         <img src="img/arrow-prew.png" alt="" width="40" height="40" class="arrow-img">
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-lg-4">
+                    <div class="col-xs-4 col-sm-4 col-lg-4">
                         <img src="img/2.png" alt="">
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-lg-4">
+                    <div class="col-xs-4 col-sm-4 col-lg-4">
                         <p>Sara Taylor</p>
                         <p>Trainer</p>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-lg-2">
+                    <div class="col-xs-2 col-sm-2 col-lg-2">
                         <img src="img/arrow-next.png" alt="" width="40" height="40" class="arrow-img">
                     </div>
                 </div>
@@ -377,7 +402,8 @@
     <div class="col-xs-12 col-sm-12 col-lg-12 text-center copyright">Copyright © 2016-2017 Yoga classes</div>
 </footer>
 <!--build:js js/main.min.js -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 <script src="js/main.js"></script>
 <!-- endbuild -->
 </body>

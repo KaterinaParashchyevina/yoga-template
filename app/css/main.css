@@ -170,10 +170,6 @@ body {
   height: 100%;
   font-family: 'Open Sans', sans-serif; }
 
-.container {
-  width: 1920px;
-  margin: 0 auto; }
-
 .container-inside {
   width: 1200px;
   margin: 0 auto; }
@@ -189,6 +185,31 @@ nav {
   text-align: center;
   padding-bottom: 15px;
   padding-top: 15px; }
+  nav .dropdown-menu {
+    display: none; }
+    nav .dropdown-menu .dropdown-toggle {
+      padding: .5em 1em;
+      text-decoration: none;
+      color: #818181;
+      font-weight: 700;
+      position: absolute;
+      left: 5vw; }
+    nav .dropdown-menu ul.dropdown {
+      display: none;
+      position: absolute;
+      top: 10vh;
+      margin-top: .5em;
+      min-width: 12em;
+      padding: 0;
+      z-index: 999; }
+      nav .dropdown-menu ul.dropdown li {
+        list-style-type: none;
+        display: block;
+        background: #ffffff; }
+        nav .dropdown-menu ul.dropdown li a {
+          text-decoration: none;
+          padding: .5em 1em;
+          display: block; }
   nav ul {
     padding: 0; }
     nav ul li {
@@ -527,14 +548,39 @@ h1 + p {
     background: #6474ec; }
   .shop .round-button {
     display: inline-block;
-    position: absolute; }
+    position: absolute;
+    left: calc(50% + 600px); }
     .shop .round-button .radio {
-      vertical-align: top;
-      width: 17px;
-      height: 17px;
-      margin: 3px;
-      border: 1px solid #777777;
-      background: red; }
+      margin: 0.5rem; }
+      .shop .round-button .radio input[type="radio"] {
+        position: absolute;
+        opacity: 0; }
+        .shop .round-button .radio input[type="radio"] + .radio-label:before {
+          content: '';
+          background: transparent;
+          border-radius: 100%;
+          border: 1px solid #777777;
+          display: inline-block;
+          width: 1.4em;
+          height: 1.4em;
+          position: relative;
+          top: -0.2em;
+          margin-right: 1em;
+          vertical-align: top;
+          cursor: pointer;
+          text-align: center;
+          transition: all 250ms ease; }
+        .shop .round-button .radio input[type="radio"]:checked + .radio-label:before {
+          background-color: #5b6ceb;
+          box-shadow: inset 0 0 0 4px #ffffff;
+          border-color: #5b6ceb; }
+        .shop .round-button .radio input[type="radio"]:focus + .radio-label:before {
+          outline: none;
+          border-color: #5b6ceb; }
+        .shop .round-button .radio input[type="radio"] + .radio-label:empty:before {
+          margin-right: 0; }
+    .shop .round-button .radio:first-child {
+      margin-top: 6vh; }
   .shop .trainer {
     width: 25%;
     font-size: 14px;
@@ -623,3 +669,71 @@ footer {
     padding: 2em;
     margin-top: 6rem;
     font-size: 16px; }
+
+@media screen and (max-width: 1280px) {
+  .shop .round-button {
+    left: calc(50% + 500px); } }
+
+@media (max-width: 1200px) {
+  .container-inside {
+    width: 100%; }
+  .main-banner {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%; }
+  .about {
+    padding-right: 5vw;
+    padding-left: 5vw; }
+    .about img {
+      width: 100%; }
+  .elements {
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: 50% 50%; }
+  .shop .round-button {
+    left: calc(50% + 450px); }
+  .shop .trainer {
+    width: 35%; }
+  footer h4, footer p, footer .social-icons {
+    padding-right: 5vw;
+    padding-left: 5vw; } }
+
+@media (max-width: 992px) {
+  nav .main-menu {
+    display: none; }
+  nav .dropdown-menu {
+    display: block; }
+  .classes .yoga-class-block {
+    width: 95%; }
+  .shop .round-button {
+    left: calc(50% + 400px); }
+  .shop .table-cell {
+    padding: 25px 5vw; } }
+
+@media (max-width: 768px) {
+  .main-banner .container-inside div {
+    padding-left: 10px;
+    padding-right: 10px; }
+  form {
+    float: none;
+    width: 100%; }
+    form button {
+      float: none; }
+  .about {
+    text-align: center; }
+    .about p {
+      padding-right: 0; }
+    .about img {
+      width: 95%; }
+  .shop {
+    -webkit-background-size: cover;
+    background-size: cover; }
+    .shop .round-button {
+      display: none; }
+    .shop .trainer {
+      width: 75%;
+      margin-left: 10%; }
+  footer {
+    text-align: center; }
+    footer .contact-icon {
+      margin-left: 5vw; } }
